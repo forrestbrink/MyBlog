@@ -41,7 +41,7 @@
             @Html.LabelFor(model => model.ImageURL)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.ImageURL)
+           <input type="file" name="Image" id="Image" />
             @Html.ValidationMessageFor(model => model.ImageURL)
         </div>
 
@@ -62,7 +62,7 @@
         </div>
 
         <p>
-            <input type="submit" value="Create" />
+             <input type="submit" value="Submit" />
         </p>
     </fieldset>
 }
