@@ -1,61 +1,228 @@
-﻿body {
-    font-size: .85em;
-    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
-    color: #232323;
-    background-color: #fff;
+﻿/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+{
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
 }
 
-header, footer, nav, section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+{
+    display: block;
+}
+
+body
+{
+    line-height: 1;
+    font-size: .85em;
+    color: #232323;
+    background-color: #fff;
+    margin:0 20% 5% 20%;
+    text-align: center;
+}
+
+ol, ul
+{
+    list-style: none;
+}
+
+blockquote, q
+{
+    quotes: none;
+}
+
+    blockquote:before, blockquote:after, q:before, q:after
+    {
+        content: none;
+    }
+
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+header, footer, nav, section
+{
     display: block;
 }
 
 
 /* Styles for basic forms
 -----------------------------------------------------------*/
-fieldset {
+fieldset
+{
     border: 1px solid #ddd;
     padding: 0 1.4em 1.4em 1.4em;
     margin: 0 0 1.5em 0;
 }
 
-legend {
+legend
+{
     font-size: 1.2em;
     font-weight: bold;
 }
 
-textarea {
+textarea
+{
     min-height: 75px;
 }
 
-.editor-label {
+.editor-label
+{
     margin: 1em 0 0 0;
 }
 
-.editor-field {
+.editor-field
+{
     margin: 0.5em 0 0 0;
 }
 
 
 /* Styles for validation helpers
 -----------------------------------------------------------*/
-.field-validation-error {
+.field-validation-error
+{
     color: #f00;
 }
 
-.field-validation-valid {
+.field-validation-valid
+{
     display: none;
 }
 
-.input-validation-error {
+.input-validation-error
+{
     border: 1px solid #f00;
     background-color: #fee;
 }
 
-.validation-summary-errors {
+.validation-summary-errors
+{
     font-weight: bold;
     color: #f00;
 }
 
-.validation-summary-valid {
+.validation-summary-valid
+{
     display: none;
+}
+
+
+/* LANDING PAGE STYLES */
+
+
+
+li
+{
+    display: inline-block;
+}
+
+hr
+{
+    width: 75%;
+    border: dotted grey .2em;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.post
+{
+    text-align: left;
+}
+
+.postInfo > span
+{
+    font-size: 30px;
+    font-variant: small-caps;
+}
+
+.postContent
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+a:link, a:visited
+{
+    color: gray;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 10px;
+}
+
+a:hover {
+    color:black;
+}
+
+h1
+{
+    font-variant: small-caps;
+    font-size: 40px;
+}
+
+
+img
+{
+    max-height: 200px;
+    border-radius: 10px;
+    margin: 0 10px 0 0;
+    float: right;
+}
+
+.commentsDiv {
+    display:none;
+    background:#e2d0d0;
+    border-radius:15px;
+    padding:5px;
+}
+
+.showComments { 
+    font-weight:bold;
+    cursor:pointer;
+    margin:5px 0 5px 0;
+}
+.comment {
+    margin:3px 0 3px 0;
+    border-radius:10px;
+    border: 1px solid #f8b5b5;
+    background:#ffe3e3;
+    padding:5px;
+}
+
+.comment span {
+    
+}
+
+.comment div {
+    font-style:italic;
+    padding:0 0 0 10px;
+}
+
+.like {
+    color:gray;
+    cursor:pointer;
+    margin:5px 0 5px 0;
+}
+
+.thumb {
+    height:50px;
+    border-radius:50%;
+    float:left;
+}
+
+.postInfo small {margin-left:1px;}
+.postInfo small a:link, .postInfo small a:visited {
+       color: gray;
+       font-size:1em;
+    text-decoration: none;
+    padding:0;
+}
+
+.clear {clear:both;}
 }

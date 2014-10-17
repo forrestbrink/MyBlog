@@ -1,0 +1,56 @@
+﻿@model IEnumerable<MyBlog.Models.Post>
+
+@{
+    ViewBag.Title = "My Blog";
+}
+@foreach (var @Post in Model)
+{
+    
+
+    <section class="post">
+        <div class="postInfo">
+            <img class="thumb" src="http://freedogpics.com/wp-content/uploads/2014/08/pictures_1407299643.jpg" /> 
+            <span>@Post.Title</span><br />
+            <small>By <a href="/author/AuthorName">@Post.Author.Name</a>@Post.DateCreated</small>
+        </div>
+        <div class="postContent">
+
+            <img src="http://freedogpics.com/wp-content/uploads/2014/08/pictures_1407299643.jpg" />
+
+            @Post.Body
+
+        </div>
+        <div>
+
+            <span class="like" data-postid="@Post.PostID">
+                @Post.Likes Likes
+            </span>
+
+        </div>
+
+        <div class="comments">
+            <span class="showComments">
+                <span>Show</span> @Post.Comments.Count() comments
+            </span>
+
+            <div class="commentsDiv">
+                @foreach (var comment in Post.Comments)
+                {
+                    @Html.Partial("Comment", comment)
+                }
+
+
+                <form action="@Url.Action("Add Comment", "Home")" method="post">
+                    <label for="Name">Your Name</label>
+                    <input type="text" name="author" class="commentAuthor" />
+                    <br />
+                    <label for="body">Comment</label>
+                    <textarea name="body" class="commentBody"></textarea>
+                    <br />
+                    <input type="hidden" name="PostID" value="@Post.PostID" />
+                    <input type="submit" value="Add Comment" />
+                </form>
+            </div>
+    </section>
+    
+}

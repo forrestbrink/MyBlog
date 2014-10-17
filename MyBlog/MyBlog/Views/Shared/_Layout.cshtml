@@ -16,6 +16,10 @@
             <div>
                 Hello, @User.Identity.Name
                 &nbsp|&nbsp;
+                <a href="@Url.Action("Index", "Home")">
+                    Home
+                </a>
+                &nbsp|&nbsp;
                 <a href="@Url.Action("Index", "Post")">
                     Your Posts
                 </a>
@@ -30,6 +34,7 @@
             <div>
                 <a href="@Url.Action("Login", "Account")">
                     Login
+
                 </a>
                 &nbsp|&nbsp;
                 <a href="@Url.Action("Register", "Account")">

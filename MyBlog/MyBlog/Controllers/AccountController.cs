@@ -31,7 +31,7 @@ namespace MyBlog.Controllers
                 //save the file
                 ImageURL.SaveAs(path);
                 //update our registration object
-                registration.ImageUrl = "~/content/" + filename;
+                registration.ImageUrl = "/content/" + filename;
             }
             //create our membership user:
             Membership.CreateUser(registration.Username, registration.Password);
